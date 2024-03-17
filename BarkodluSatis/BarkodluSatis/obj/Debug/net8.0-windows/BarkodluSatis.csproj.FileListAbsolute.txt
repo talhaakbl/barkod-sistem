@@ -1,0 +1,16 @@
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.exe
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.dll.config
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.deps.json
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.runtimeconfig.json
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net8.0-windows\BarkodluSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.Form1.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.Properties.Resources.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.csproj.GenerateResource.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.csproj.CoreCompileInputs.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\refint\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\BarkodluSatis.genruntimeconfig.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows\ref\BarkodluSatis.dll
