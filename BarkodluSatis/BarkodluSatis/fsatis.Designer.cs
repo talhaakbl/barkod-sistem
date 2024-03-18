@@ -28,32 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             splitContainer1 = new SplitContainer();
             tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
+            chSatisIadeIslemi = new CheckBox();
             label6 = new Label();
             label5 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            dataGridView1 = new DataGridView();
+            tBarkod = new TextBox();
+            tMiktar = new TextBox();
+            gridSatislistesi = new DataGridView();
             UrunAdi = new DataGridViewTextBoxColumn();
             Miktar = new DataGridViewTextBoxColumn();
             Fiyat = new DataGridViewTextBoxColumn();
             Toplam = new DataGridViewTextBoxColumn();
             Sil = new DataGridViewImageColumn();
             tableLayoutPanel2 = new TableLayoutPanel();
-            button3 = new Button();
-            button2 = new Button();
-            button1 = new Button();
+            bKartNakit = new Button();
+            bKart = new Button();
+            bNakit = new Button();
             tableLayoutPanel3 = new TableLayoutPanel();
-            textBox3 = new TextBox();
-            panel2 = new Panel();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
+            tGenelToplam = new TextBox();
+            tableLayoutPanel10 = new TableLayoutPanel();
+            tableLayoutPanel11 = new TableLayoutPanel();
+            tÖdenen = new TextBox();
             label1 = new Label();
+            tableLayoutPanel12 = new TableLayoutPanel();
+            label2 = new Label();
+            tParaUstu = new TextBox();
             splitContainer2 = new SplitContainer();
             tableLayoutPanel4 = new TableLayoutPanel();
             button27 = new Button();
@@ -119,10 +122,12 @@
             splitContainer1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)gridSatislistesi).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
-            panel2.SuspendLayout();
+            tableLayoutPanel10.SuspendLayout();
+            tableLayoutPanel11.SuspendLayout();
+            tableLayoutPanel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer2).BeginInit();
             splitContainer2.Panel1.SuspendLayout();
             splitContainer2.Panel2.SuspendLayout();
@@ -158,14 +163,14 @@
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(dataGridView1, 0, 1);
+            tableLayoutPanel1.Controls.Add(gridSatislistesi, 0, 1);
             tableLayoutPanel1.Controls.Add(tableLayoutPanel2, 0, 2);
             tableLayoutPanel1.Dock = DockStyle.Fill;
             tableLayoutPanel1.Location = new Point(0, 0);
             tableLayoutPanel1.Margin = new Padding(0);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 3;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 130F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 80F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.Size = new Size(661, 732);
@@ -174,22 +179,40 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(chSatisIadeIslemi);
             panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
-            panel1.Controls.Add(textBox2);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(tBarkod);
+            panel1.Controls.Add(tMiktar);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(3, 3);
             panel1.Name = "panel1";
-            panel1.Size = new Size(655, 94);
+            panel1.Size = new Size(655, 124);
             panel1.TabIndex = 0;
+            // 
+            // chSatisIadeIslemi
+            // 
+            chSatisIadeIslemi.Appearance = Appearance.Button;
+            chSatisIadeIslemi.AutoSize = true;
+            chSatisIadeIslemi.BackColor = Color.Olive;
+            chSatisIadeIslemi.FlatAppearance.BorderColor = SystemColors.GradientActiveCaption;
+            chSatisIadeIslemi.FlatAppearance.CheckedBackColor = Color.Firebrick;
+            chSatisIadeIslemi.FlatStyle = FlatStyle.Flat;
+            chSatisIadeIslemi.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
+            chSatisIadeIslemi.ForeColor = Color.White;
+            chSatisIadeIslemi.Location = new Point(9, 9);
+            chSatisIadeIslemi.Name = "chSatisIadeIslemi";
+            chSatisIadeIslemi.Size = new Size(174, 35);
+            chSatisIadeIslemi.TabIndex = 4;
+            chSatisIadeIslemi.Text = "SATIŞ YAPILIYOR";
+            chSatisIadeIslemi.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 12F);
             label6.ForeColor = Color.DarkCyan;
-            label6.Location = new Point(183, 20);
+            label6.Location = new Point(183, 56);
             label6.Name = "label6";
             label6.Size = new Size(88, 28);
             label6.TabIndex = 3;
@@ -200,56 +223,57 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 12F);
             label5.ForeColor = Color.DarkCyan;
-            label5.Location = new Point(9, 20);
+            label5.Location = new Point(9, 56);
             label5.Name = "label5";
             label5.Size = new Size(81, 28);
             label5.TabIndex = 2;
             label5.Text = "MİKTAR";
             label5.Click += label5_Click;
             // 
-            // textBox2
+            // tBarkod
             // 
-            textBox2.Font = new Font("Segoe UI", 12F);
-            textBox2.Location = new Point(183, 51);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(232, 34);
-            textBox2.TabIndex = 1;
+            tBarkod.Font = new Font("Segoe UI", 12F);
+            tBarkod.Location = new Point(183, 87);
+            tBarkod.Name = "tBarkod";
+            tBarkod.Size = new Size(232, 34);
+            tBarkod.TabIndex = 1;
             // 
-            // textBox1
+            // tMiktar
             // 
-            textBox1.Font = new Font("Segoe UI", 12F);
-            textBox1.Location = new Point(9, 51);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 34);
-            textBox1.TabIndex = 0;
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            tMiktar.Font = new Font("Segoe UI", 12F);
+            tMiktar.Location = new Point(9, 87);
+            tMiktar.Name = "tMiktar";
+            tMiktar.Size = new Size(125, 34);
+            tMiktar.TabIndex = 0;
+            tMiktar.TextAlign = HorizontalAlignment.Center;
+            tMiktar.TextChanged += textBox1_TextChanged;
             // 
-            // dataGridView1
+            // gridSatislistesi
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = SystemColors.GradientInactiveCaption;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(0, 174, 219);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.Padding = new Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { UrunAdi, Miktar, Fiyat, Toplam, Sil });
-            dataGridView1.Dock = DockStyle.Fill;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(3, 103);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersVisible = false;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(655, 499);
-            dataGridView1.TabIndex = 1;
+            gridSatislistesi.AllowUserToAddRows = false;
+            gridSatislistesi.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            gridSatislistesi.BackgroundColor = SystemColors.GradientInactiveCaption;
+            gridSatislistesi.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(0, 174, 219);
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.Padding = new Padding(3);
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            gridSatislistesi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            gridSatislistesi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            gridSatislistesi.Columns.AddRange(new DataGridViewColumn[] { UrunAdi, Miktar, Fiyat, Toplam, Sil });
+            gridSatislistesi.Dock = DockStyle.Fill;
+            gridSatislistesi.EnableHeadersVisualStyles = false;
+            gridSatislistesi.Location = new Point(3, 133);
+            gridSatislistesi.Name = "gridSatislistesi";
+            gridSatislistesi.RowHeadersVisible = false;
+            gridSatislistesi.RowHeadersWidth = 51;
+            gridSatislistesi.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            gridSatislistesi.Size = new Size(655, 475);
+            gridSatislistesi.TabIndex = 1;
             // 
             // UrunAdi
             // 
@@ -289,156 +313,201 @@
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 20F));
             tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 40F));
-            tableLayoutPanel2.Controls.Add(button3, 2, 0);
-            tableLayoutPanel2.Controls.Add(button2, 1, 0);
-            tableLayoutPanel2.Controls.Add(button1, 0, 0);
+            tableLayoutPanel2.Controls.Add(bKartNakit, 2, 0);
+            tableLayoutPanel2.Controls.Add(bKart, 1, 0);
+            tableLayoutPanel2.Controls.Add(bNakit, 0, 0);
             tableLayoutPanel2.Controls.Add(tableLayoutPanel3, 3, 0);
             tableLayoutPanel2.Dock = DockStyle.Fill;
-            tableLayoutPanel2.Location = new Point(3, 608);
+            tableLayoutPanel2.Location = new Point(3, 614);
             tableLayoutPanel2.Name = "tableLayoutPanel2";
             tableLayoutPanel2.RowCount = 1;
             tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel2.Size = new Size(655, 121);
+            tableLayoutPanel2.Size = new Size(655, 115);
             tableLayoutPanel2.TabIndex = 2;
             // 
-            // button3
+            // bKartNakit
             // 
-            button3.BackColor = Color.Olive;
-            button3.Dock = DockStyle.Fill;
-            button3.FlatAppearance.BorderColor = Color.Olive;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(263, 1);
-            button3.Margin = new Padding(1);
-            button3.Name = "button3";
-            button3.Size = new Size(129, 119);
-            button3.TabIndex = 2;
-            button3.Text = "NAKİT KART\r\n(F3)\r\n";
-            button3.TextImageRelation = TextImageRelation.ImageAboveText;
-            button3.UseVisualStyleBackColor = false;
+            bKartNakit.BackColor = Color.Olive;
+            bKartNakit.Dock = DockStyle.Fill;
+            bKartNakit.FlatAppearance.BorderColor = Color.Olive;
+            bKartNakit.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            bKartNakit.ForeColor = Color.White;
+            bKartNakit.Image = (Image)resources.GetObject("bKartNakit.Image");
+            bKartNakit.Location = new Point(263, 1);
+            bKartNakit.Margin = new Padding(1);
+            bKartNakit.Name = "bKartNakit";
+            bKartNakit.Size = new Size(129, 113);
+            bKartNakit.TabIndex = 2;
+            bKartNakit.Text = "NAKİT KART\r\n(F3)\r\n";
+            bKartNakit.TextImageRelation = TextImageRelation.ImageAboveText;
+            bKartNakit.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // bKart
             // 
-            button2.BackColor = Color.FromArgb(0, 174, 219);
-            button2.Dock = DockStyle.Fill;
-            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 174, 219);
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(132, 1);
-            button2.Margin = new Padding(1);
-            button2.Name = "button2";
-            button2.Size = new Size(129, 119);
-            button2.TabIndex = 1;
-            button2.Text = "KART\n (F2)\r\n";
-            button2.TextImageRelation = TextImageRelation.ImageAboveText;
-            button2.UseVisualStyleBackColor = false;
+            bKart.BackColor = Color.FromArgb(0, 174, 219);
+            bKart.Dock = DockStyle.Fill;
+            bKart.FlatAppearance.BorderColor = Color.FromArgb(0, 174, 219);
+            bKart.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            bKart.ForeColor = Color.White;
+            bKart.Image = (Image)resources.GetObject("bKart.Image");
+            bKart.Location = new Point(132, 1);
+            bKart.Margin = new Padding(1);
+            bKart.Name = "bKart";
+            bKart.Size = new Size(129, 113);
+            bKart.TabIndex = 1;
+            bKart.Text = "KART\n (F2)\r\n";
+            bKart.TextImageRelation = TextImageRelation.ImageAboveText;
+            bKart.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // bNakit
             // 
-            button1.BackColor = Color.Tomato;
-            button1.Dock = DockStyle.Fill;
-            button1.FlatAppearance.BorderColor = Color.Tomato;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            button1.ForeColor = Color.White;
-            button1.Image = Properties.Resources.turkish_lira;
-            button1.Location = new Point(1, 1);
-            button1.Margin = new Padding(1);
-            button1.Name = "button1";
-            button1.Size = new Size(129, 119);
-            button1.TabIndex = 0;
-            button1.Text = "NAKİT\r\n (F1)\r\n";
-            button1.TextImageRelation = TextImageRelation.ImageAboveText;
-            button1.UseVisualStyleBackColor = false;
+            bNakit.BackColor = Color.Tomato;
+            bNakit.Dock = DockStyle.Fill;
+            bNakit.FlatAppearance.BorderColor = Color.Tomato;
+            bNakit.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            bNakit.ForeColor = Color.White;
+            bNakit.Image = Properties.Resources.turkish_lira;
+            bNakit.Location = new Point(1, 1);
+            bNakit.Margin = new Padding(1);
+            bNakit.Name = "bNakit";
+            bNakit.Size = new Size(129, 113);
+            bNakit.TabIndex = 0;
+            bNakit.Text = "NAKİT\r\n (F1)\r\n";
+            bNakit.TextImageRelation = TextImageRelation.ImageAboveText;
+            bNakit.UseVisualStyleBackColor = false;
             // 
             // tableLayoutPanel3
             // 
+            tableLayoutPanel3.BackColor = Color.Tomato;
             tableLayoutPanel3.ColumnCount = 1;
             tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Controls.Add(textBox3, 0, 0);
-            tableLayoutPanel3.Controls.Add(panel2, 0, 1);
+            tableLayoutPanel3.Controls.Add(tGenelToplam, 0, 0);
+            tableLayoutPanel3.Controls.Add(tableLayoutPanel10, 0, 1);
             tableLayoutPanel3.Dock = DockStyle.Fill;
             tableLayoutPanel3.Location = new Point(393, 0);
-            tableLayoutPanel3.Margin = new Padding(0);
+            tableLayoutPanel3.Margin = new Padding(0, 0, 0, 1);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 2;
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 40F));
-            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 60F));
-            tableLayoutPanel3.Size = new Size(262, 121);
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 47.5F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 52.5F));
+            tableLayoutPanel3.Size = new Size(262, 114);
             tableLayoutPanel3.TabIndex = 3;
             // 
-            // textBox3
+            // tGenelToplam
             // 
-            textBox3.BackColor = Color.Tomato;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.Dock = DockStyle.Fill;
-            textBox3.Font = new Font("Segoe UI", 20F);
-            textBox3.ForeColor = Color.White;
-            textBox3.Location = new Point(1, 1);
-            textBox3.Margin = new Padding(1);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(260, 52);
-            textBox3.TabIndex = 1;
-            textBox3.TextAlign = HorizontalAlignment.Center;
-            textBox3.TextChanged += textBox3_TextChanged;
+            tGenelToplam.BackColor = Color.Tomato;
+            tGenelToplam.BorderStyle = BorderStyle.None;
+            tGenelToplam.Dock = DockStyle.Fill;
+            tGenelToplam.Font = new Font("Segoe UI", 24F);
+            tGenelToplam.ForeColor = Color.White;
+            tGenelToplam.Location = new Point(1, 1);
+            tGenelToplam.Margin = new Padding(1);
+            tGenelToplam.Name = "tGenelToplam";
+            tGenelToplam.Size = new Size(260, 54);
+            tGenelToplam.TabIndex = 1;
+            tGenelToplam.Text = "12";
+            tGenelToplam.TextAlign = HorizontalAlignment.Center;
+            tGenelToplam.TextChanged += textBox3_TextChanged;
             // 
-            // panel2
+            // tableLayoutPanel10
             // 
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Dock = DockStyle.Fill;
-            panel2.Location = new Point(3, 51);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(256, 67);
-            panel2.TabIndex = 2;
+            tableLayoutPanel10.ColumnCount = 2;
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel10.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel10.Controls.Add(tableLayoutPanel11, 0, 0);
+            tableLayoutPanel10.Controls.Add(tableLayoutPanel12, 1, 0);
+            tableLayoutPanel10.Dock = DockStyle.Fill;
+            tableLayoutPanel10.Location = new Point(0, 54);
+            tableLayoutPanel10.Margin = new Padding(0);
+            tableLayoutPanel10.Name = "tableLayoutPanel10";
+            tableLayoutPanel10.RowCount = 1;
+            tableLayoutPanel10.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel10.Size = new Size(262, 60);
+            tableLayoutPanel10.TabIndex = 2;
             // 
-            // label4
+            // tableLayoutPanel11
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F);
-            label4.ForeColor = Color.Maroon;
-            label4.Location = new Point(123, 33);
-            label4.Name = "label4";
-            label4.Size = new Size(65, 28);
-            label4.TabIndex = 3;
-            label4.Text = "label4";
+            tableLayoutPanel11.BackColor = Color.DarkOrange;
+            tableLayoutPanel11.ColumnCount = 1;
+            tableLayoutPanel11.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel11.Controls.Add(tÖdenen, 0, 1);
+            tableLayoutPanel11.Controls.Add(label1, 0, 0);
+            tableLayoutPanel11.Dock = DockStyle.Fill;
+            tableLayoutPanel11.Location = new Point(0, 0);
+            tableLayoutPanel11.Margin = new Padding(0);
+            tableLayoutPanel11.Name = "tableLayoutPanel11";
+            tableLayoutPanel11.RowCount = 2;
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel11.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel11.Size = new Size(131, 60);
+            tableLayoutPanel11.TabIndex = 0;
             // 
-            // label3
+            // tÖdenen
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F);
-            label3.ForeColor = SystemColors.HotTrack;
-            label3.Location = new Point(123, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 28);
-            label3.TabIndex = 2;
-            label3.Text = "label3";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.ForeColor = Color.Maroon;
-            label2.Location = new Point(3, 33);
-            label2.Name = "label2";
-            label2.Size = new Size(114, 28);
-            label2.TabIndex = 1;
-            label2.Text = "PARA ÜSTÜ";
-            label2.Click += label2_Click;
+            tÖdenen.BackColor = Color.DarkOrange;
+            tÖdenen.BorderStyle = BorderStyle.None;
+            tÖdenen.Dock = DockStyle.Fill;
+            tÖdenen.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            tÖdenen.ForeColor = Color.White;
+            tÖdenen.Location = new Point(3, 33);
+            tÖdenen.Name = "tÖdenen";
+            tÖdenen.Size = new Size(125, 27);
+            tÖdenen.TabIndex = 0;
+            tÖdenen.Text = "0";
+            tÖdenen.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F);
-            label1.ForeColor = SystemColors.HotTrack;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(91, 28);
-            label1.TabIndex = 0;
-            label1.Text = "ÖDENEN";
+            label1.Size = new Size(125, 23);
+            label1.TabIndex = 1;
+            label1.Text = "ÖDENEN  (F12)";
+            // 
+            // tableLayoutPanel12
+            // 
+            tableLayoutPanel12.BackColor = Color.DimGray;
+            tableLayoutPanel12.ColumnCount = 1;
+            tableLayoutPanel12.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
+            tableLayoutPanel12.Controls.Add(label2, 0, 0);
+            tableLayoutPanel12.Controls.Add(tParaUstu, 0, 1);
+            tableLayoutPanel12.Dock = DockStyle.Fill;
+            tableLayoutPanel12.Location = new Point(131, 0);
+            tableLayoutPanel12.Margin = new Padding(0);
+            tableLayoutPanel12.Name = "tableLayoutPanel12";
+            tableLayoutPanel12.RowCount = 2;
+            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel12.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
+            tableLayoutPanel12.Size = new Size(131, 60);
+            tableLayoutPanel12.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(108, 23);
+            label2.TabIndex = 2;
+            label2.Text = "PARA ÜSTÜ  ";
+            // 
+            // tParaUstu
+            // 
+            tParaUstu.BackColor = Color.DimGray;
+            tParaUstu.BorderStyle = BorderStyle.None;
+            tParaUstu.Dock = DockStyle.Fill;
+            tParaUstu.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            tParaUstu.ForeColor = Color.White;
+            tParaUstu.Location = new Point(3, 33);
+            tParaUstu.Name = "tParaUstu";
+            tParaUstu.Size = new Size(125, 27);
+            tParaUstu.TabIndex = 0;
+            tParaUstu.Text = "0";
+            tParaUstu.TextAlign = HorizontalAlignment.Center;
             // 
             // splitContainer2
             // 
@@ -1453,12 +1522,15 @@
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)gridSatislistesi).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             tableLayoutPanel3.ResumeLayout(false);
             tableLayoutPanel3.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
+            tableLayoutPanel10.ResumeLayout(false);
+            tableLayoutPanel11.ResumeLayout(false);
+            tableLayoutPanel11.PerformLayout();
+            tableLayoutPanel12.ResumeLayout(false);
+            tableLayoutPanel12.PerformLayout();
             splitContainer2.Panel1.ResumeLayout(false);
             splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer2).EndInit();
@@ -1477,21 +1549,16 @@
 
         private SplitContainer splitContainer1;
         private TableLayoutPanel tableLayoutPanel1;
-        private DataGridView dataGridView1;
+        private DataGridView gridSatislistesi;
         private Panel panel1;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox tBarkod;
+        private TextBox tMiktar;
         private TableLayoutPanel tableLayoutPanel2;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button bKartNakit;
+        private Button bKart;
+        private Button bNakit;
         private TableLayoutPanel tableLayoutPanel3;
-        private TextBox textBox3;
-        private Panel panel2;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
+        private TextBox tGenelToplam;
         private Label label6;
         private Label label5;
         private SplitContainer splitContainer2;
@@ -1558,5 +1625,13 @@
         private DataGridViewTextBoxColumn Fiyat;
         private DataGridViewTextBoxColumn Toplam;
         private DataGridViewImageColumn Sil;
+        private TableLayoutPanel tableLayoutPanel10;
+        private TableLayoutPanel tableLayoutPanel11;
+        private TextBox tÖdenen;
+        private Label label1;
+        private TableLayoutPanel tableLayoutPanel12;
+        private TextBox tParaUstu;
+        private Label label2;
+        private CheckBox chSatisIadeIslemi;
     }
 }

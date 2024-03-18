@@ -1,0 +1,17 @@
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.exe
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.dll.config
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.deps.json
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.runtimeconfig.json
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\bin\Debug\net6.0-windows7.0\BarkodluSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.Form1.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.Properties.Resources.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.csproj.GenerateResource.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.csproj.CoreCompileInputs.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.sourcelink.json
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\refint\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\BarkodluSatis.genruntimeconfig.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net6.0-windows7.0\ref\BarkodluSatis.dll

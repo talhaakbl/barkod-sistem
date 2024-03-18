@@ -1,0 +1,7 @@
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.csproj.AssemblyReference.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.fsatis.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.Properties.Resources.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.csproj.GenerateResource.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.csproj.CoreCompileInputs.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net4.8\BarkodluSatis.sourcelink.json

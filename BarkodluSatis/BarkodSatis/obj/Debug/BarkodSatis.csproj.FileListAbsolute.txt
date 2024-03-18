@@ -1,0 +1,10 @@
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.csproj.AssemblyReference.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.Properties.Resources.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.csproj.GenerateResource.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.csproj.CoreCompileInputs.cache
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.Form1.resources
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\BarkodSatis.exe.config
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\BarkodSatis.exe
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\BarkodSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.exe
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.pdb

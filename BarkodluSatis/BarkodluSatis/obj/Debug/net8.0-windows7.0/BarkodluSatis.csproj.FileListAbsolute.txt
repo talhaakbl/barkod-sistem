@@ -14,3 +14,4 @@ C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\De
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows7.0\BarkodluSatis.pdb
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows7.0\BarkodluSatis.genruntimeconfig.cache
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows7.0\ref\BarkodluSatis.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodluSatis\obj\Debug\net8.0-windows7.0\BarkodluSatis.sourcelink.json

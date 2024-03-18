@@ -3,10 +3,11 @@
   <PropertyGroup>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net8.0-windows7.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <TargetFramework>net4.8</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <AutoGenerateBindingRedirects>False</AutoGenerateBindingRedirects>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
