@@ -8,3 +8,8 @@ C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debu
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\BarkodSatis.pdb
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.exe
 C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.pdb
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\EntityFramework.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\EntityFramework.xml
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\talha\Documents\GitHub\barkod-sistem\BarkodluSatis\BarkodSatis\obj\Debug\BarkodSatis.csproj.CopyComplete

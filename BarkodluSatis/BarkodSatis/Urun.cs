@@ -25,7 +25,7 @@ namespace BarkodSatis
         public Nullable<double> KdvTutari { get; set; }
         public string Birim { get; set; }
         public Nullable<double> Miktar { get; set; }
-        public Nullable<System.DateTime> Tarif { get; set; }
+        public Nullable<System.DateTime> Tarih { get; set; }
         public string Kullanici { get; set; }
     }
 }

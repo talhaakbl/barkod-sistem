@@ -4,7 +4,9 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="BarkodDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="BarkodDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Urun">
           <Key>
             <PropertyRef Name="UrunId" />
@@ -20,19 +22,33 @@
           <Property Name="KdvTutari" Type="float" />
           <Property Name="Birim" Type="nvarchar" MaxLength="50" />
           <Property Name="Miktar" Type="float" />
-          <Property Name="Tarif" Type="datetime" />
+          <Property Name="Tarih" Type="datetime" />
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="BarkodDBModelStoreContainer">
-          <EntitySet Name="Urun" EntityType="Self.Urun" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Urun" EntityType="Self.Urun" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Urun].[UrunId] AS [UrunId], 
+    [Urun].[Barkod] AS [Barkod], 
+    [Urun].[UrunAd] AS [UrunAd], 
+    [Urun].[Aciklama] AS [Aciklama], 
+    [Urun].[UrunGrup] AS [UrunGrup], 
+    [Urun].[AlisFiyatı] AS [AlisFiyatı], 
+    [Urun].[SatisFiyatı] AS [SatisFiyatı], 
+    [Urun].[KdvOrani] AS [KdvOrani], 
+    [Urun].[KdvTutari] AS [KdvTutari], 
+    [Urun].[Birim] AS [Birim], 
+    [Urun].[Miktar] AS [Miktar], 
+    [Urun].[Tarih] AS [Tarih], 
+    [Urun].[Kullanici] AS [Kullanici]
+    FROM [dbo].[Urun] AS [Urun]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BarkodDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="BarkodDbEntities" annotation:LazyLoadingEnabled="true" >
-          <EntitySet Name="Urun" EntityType="BarkodDBModel.Urun" />
-        </EntityContainer>
         <EntityType Name="Urun">
           <Key>
             <PropertyRef Name="UrunId" />
@@ -48,31 +64,34 @@
           <Property Name="KdvTutari" Type="Double" />
           <Property Name="Birim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Miktar" Type="Double" />
-          <Property Name="Tarif" Type="DateTime" Precision="3" />
+          <Property Name="Tarih" Type="DateTime" Precision="3" />
           <Property Name="Kullanici" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityContainer Name="BarkodDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Urun" EntityType="Self.Urun" />
+        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BarkodDBModelStoreContainer" CdmEntityContainer="BarkodDbEntities" >
+        <EntityContainerMapping StorageEntityContainer="BarkodDBModelStoreContainer" CdmEntityContainer="BarkodDBEntities">
           <EntitySetMapping Name="Urun">
             <EntityTypeMapping TypeName="BarkodDBModel.Urun">
               <MappingFragment StoreEntitySet="Urun">
-                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
-                <ScalarProperty Name="Tarif" ColumnName="Tarif" />
-                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
-                <ScalarProperty Name="Birim" ColumnName="Birim" />
-                <ScalarProperty Name="KdvTutari" ColumnName="KdvTutari" />
-                <ScalarProperty Name="KdvOrani" ColumnName="KdvOrani" />
-                <ScalarProperty Name="SatisFiyatı" ColumnName="SatisFiyatı" />
-                <ScalarProperty Name="AlisFiyatı" ColumnName="AlisFiyatı" />
-                <ScalarProperty Name="UrunGrup" ColumnName="UrunGrup" />
-                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
-                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
-                <ScalarProperty Name="Barkod" ColumnName="Barkod" />
                 <ScalarProperty Name="UrunId" ColumnName="UrunId" />
+                <ScalarProperty Name="Barkod" ColumnName="Barkod" />
+                <ScalarProperty Name="UrunAd" ColumnName="UrunAd" />
+                <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+                <ScalarProperty Name="UrunGrup" ColumnName="UrunGrup" />
+                <ScalarProperty Name="AlisFiyatı" ColumnName="AlisFiyatı" />
+                <ScalarProperty Name="SatisFiyatı" ColumnName="SatisFiyatı" />
+                <ScalarProperty Name="KdvOrani" ColumnName="KdvOrani" />
+                <ScalarProperty Name="KdvTutari" ColumnName="KdvTutari" />
+                <ScalarProperty Name="Birim" ColumnName="Birim" />
+                <ScalarProperty Name="Miktar" ColumnName="Miktar" />
+                <ScalarProperty Name="Tarih" ColumnName="Tarih" />
+                <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -122,19 +122,19 @@
     <None Include="Resources\turkish-lira.png" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="BarkodDBEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>BarkodDBEntities.Context.cs</LastGenOutput>
       <DependentUpon>BarkodDBEntities.edmx</DependentUpon>
+      <LastGenOutput>BarkodDBEntities.Context.cs</LastGenOutput>
     </Content>
     <Content Include="BarkodDBEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>BarkodDBEntities.edmx</DependentUpon>
       <LastGenOutput>BarkodDBEntities.cs</LastGenOutput>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

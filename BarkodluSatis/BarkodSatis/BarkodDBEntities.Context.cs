@@ -13,10 +13,10 @@ namespace BarkodSatis
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BarkodDbEntities : DbContext
+    public partial class BarkodDBEntities : DbContext
     {
-        public BarkodDbEntities()
-            : base("name=BarkodDbEntities")
+        public BarkodDBEntities()
+            : base("name=BarkodDBEntities")
         {
         }
     
