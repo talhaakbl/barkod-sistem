@@ -4,7 +4,14 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BarkodDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BarkodDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Terazi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TeraziOnEk" Type="int" />
+        </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="Urun">
@@ -26,6 +33,7 @@ warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key def
           <Property Name="Kullanici" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="BarkodDBModelStoreContainer">
+          <EntitySet Name="Terazi" EntityType="Self.Terazi" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Urun" EntityType="Self.Urun" store:Type="Tables" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [Urun].[UrunId] AS [UrunId], 
@@ -44,8 +52,7 @@ warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key def
     FROM [dbo].[Urun] AS [Urun]</DefiningQuery>
           </EntitySet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BarkodDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -69,7 +76,15 @@ warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key def
         </EntityType>
         <EntityContainer Name="BarkodDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Urun" EntityType="Self.Urun" />
+          <EntitySet Name="Terazi" EntityType="BarkodDBModel.Terazi" />
         </EntityContainer>
+        <EntityType Name="Terazi">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TeraziOnEk" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -92,6 +107,14 @@ warning 6002: The table/view 'BarkodDB.dbo.Urun' does not have a primary key def
                 <ScalarProperty Name="Miktar" ColumnName="Miktar" />
                 <ScalarProperty Name="Tarih" ColumnName="Tarih" />
                 <ScalarProperty Name="Kullanici" ColumnName="Kullanici" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Terazi">
+            <EntityTypeMapping TypeName="BarkodDBModel.Terazi">
+              <MappingFragment StoreEntitySet="Terazi">
+                <ScalarProperty Name="TeraziOnEk" ColumnName="TeraziOnEk" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

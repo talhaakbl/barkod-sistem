@@ -78,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terazi.cs">
+      <DependentUpon>BarkodDBEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="Urun.cs">
       <DependentUpon>BarkodDBEntities.tt</DependentUpon>
     </Compile>

@@ -32,11 +32,11 @@ namespace BarkodSatis
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,6 +46,16 @@ namespace BarkodSatis
             this.tBarkod = new System.Windows.Forms.TextBox();
             this.tMiktar = new System.Windows.Forms.TextBox();
             this.gridSatislistesi = new System.Windows.Forms.DataGridView();
+            this.BARKOD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.KDVTUTARI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ALISFIYATI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.bKartNakit = new System.Windows.Forms.Button();
             this.bKart = new System.Windows.Forms.Button();
@@ -118,16 +128,6 @@ namespace BarkodSatis
             this.button51 = new System.Windows.Forms.Button();
             this.button52 = new System.Windows.Forms.Button();
             this.button53 = new System.Windows.Forms.Button();
-            this.BARKOD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UrunAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UrunGrup = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BIRIM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fiyat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Miktar = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Toplam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.KDVTUTARI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ALISFIYATI = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sil = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -246,7 +246,7 @@ namespace BarkodSatis
             // tBarkod
             // 
             this.tBarkod.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tBarkod.Location = new System.Drawing.Point(183, 70);
+            this.tBarkod.Location = new System.Drawing.Point(183, 66);
             this.tBarkod.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tBarkod.Name = "tBarkod";
             this.tBarkod.Size = new System.Drawing.Size(232, 34);
@@ -256,12 +256,13 @@ namespace BarkodSatis
             // tMiktar
             // 
             this.tMiktar.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.tMiktar.Location = new System.Drawing.Point(9, 70);
+            this.tMiktar.Location = new System.Drawing.Point(9, 66);
             this.tMiktar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tMiktar.Name = "tMiktar";
             this.tMiktar.Size = new System.Drawing.Size(125, 34);
             this.tMiktar.TabIndex = 1;
             this.tMiktar.TabStop = false;
+            this.tMiktar.Text = "1";
             this.tMiktar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gridSatislistesi
@@ -270,6 +271,7 @@ namespace BarkodSatis
             this.gridSatislistesi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridSatislistesi.BackgroundColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.gridSatislistesi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.gridSatislistesi.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
@@ -298,9 +300,89 @@ namespace BarkodSatis
             this.gridSatislistesi.Name = "gridSatislistesi";
             this.gridSatislistesi.RowHeadersVisible = false;
             this.gridSatislistesi.RowHeadersWidth = 51;
+            this.gridSatislistesi.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.gridSatislistesi.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(3);
+            this.gridSatislistesi.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.Silver;
+            this.gridSatislistesi.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridSatislistesi.RowTemplate.Height = 39;
             this.gridSatislistesi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gridSatislistesi.Size = new System.Drawing.Size(655, 381);
             this.gridSatislistesi.TabIndex = 1;
+            this.gridSatislistesi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridSatislistesi_CellContentClick);
+            // 
+            // BARKOD
+            // 
+            this.BARKOD.HeaderText = "BARKOD";
+            this.BARKOD.MinimumWidth = 6;
+            this.BARKOD.Name = "BARKOD";
+            // 
+            // UrunAdi
+            // 
+            this.UrunAdi.HeaderText = "ÜRÜN ADI";
+            this.UrunAdi.MinimumWidth = 6;
+            this.UrunAdi.Name = "UrunAdi";
+            // 
+            // UrunGrup
+            // 
+            this.UrunGrup.HeaderText = "ÜRÜN GRUP";
+            this.UrunGrup.MinimumWidth = 6;
+            this.UrunGrup.Name = "UrunGrup";
+            this.UrunGrup.Visible = false;
+            // 
+            // BIRIM
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.BIRIM.DefaultCellStyle = dataGridViewCellStyle2;
+            this.BIRIM.HeaderText = "BİRİM";
+            this.BIRIM.MinimumWidth = 6;
+            this.BIRIM.Name = "BIRIM";
+            // 
+            // Fiyat
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "c2";
+            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Fiyat.HeaderText = "FİYAT";
+            this.Fiyat.MinimumWidth = 6;
+            this.Fiyat.Name = "Fiyat";
+            // 
+            // Miktar
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Miktar.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Miktar.HeaderText = "MİKTAR";
+            this.Miktar.MinimumWidth = 6;
+            this.Miktar.Name = "Miktar";
+            // 
+            // Toplam
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Format = "c2";
+            this.Toplam.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Toplam.HeaderText = "TOPLAM";
+            this.Toplam.MinimumWidth = 6;
+            this.Toplam.Name = "Toplam";
+            // 
+            // KDVTUTARI
+            // 
+            this.KDVTUTARI.HeaderText = "KDVTUTARI";
+            this.KDVTUTARI.MinimumWidth = 6;
+            this.KDVTUTARI.Name = "KDVTUTARI";
+            this.KDVTUTARI.Visible = false;
+            // 
+            // ALISFIYATI
+            // 
+            this.ALISFIYATI.HeaderText = "ALIŞ FİYATI";
+            this.ALISFIYATI.MinimumWidth = 6;
+            this.ALISFIYATI.Name = "ALISFIYATI";
+            this.ALISFIYATI.Visible = false;
+            // 
+            // Sil
+            // 
+            this.Sil.HeaderText = "SİL";
+            this.Sil.Image = global::BarkodSatis.Properties.Resources.SİL;
+            this.Sil.MinimumWidth = 6;
+            this.Sil.Name = "Sil";
             // 
             // tableLayoutPanel2
             // 
@@ -1506,80 +1588,6 @@ namespace BarkodSatis
             this.button53.TabIndex = 7;
             this.button53.Text = "TEMİZLE";
             this.button53.UseVisualStyleBackColor = false;
-            // 
-            // BARKOD
-            // 
-            this.BARKOD.HeaderText = "BARKOD";
-            this.BARKOD.MinimumWidth = 6;
-            this.BARKOD.Name = "BARKOD";
-            // 
-            // UrunAdi
-            // 
-            this.UrunAdi.HeaderText = "ÜRÜN ADI";
-            this.UrunAdi.MinimumWidth = 6;
-            this.UrunAdi.Name = "UrunAdi";
-            // 
-            // UrunGrup
-            // 
-            this.UrunGrup.HeaderText = "ÜRÜN GRUP";
-            this.UrunGrup.MinimumWidth = 6;
-            this.UrunGrup.Name = "UrunGrup";
-            this.UrunGrup.Visible = false;
-            // 
-            // BIRIM
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.BIRIM.DefaultCellStyle = dataGridViewCellStyle2;
-            this.BIRIM.HeaderText = "BİRİM";
-            this.BIRIM.MinimumWidth = 6;
-            this.BIRIM.Name = "BIRIM";
-            // 
-            // Fiyat
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "c2";
-            this.Fiyat.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Fiyat.HeaderText = "FİYAT";
-            this.Fiyat.MinimumWidth = 6;
-            this.Fiyat.Name = "Fiyat";
-            // 
-            // Miktar
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Miktar.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Miktar.HeaderText = "MİKTAR";
-            this.Miktar.MinimumWidth = 6;
-            this.Miktar.Name = "Miktar";
-            // 
-            // Toplam
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Format = "c2";
-            this.Toplam.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Toplam.HeaderText = "TOPLAM";
-            this.Toplam.MinimumWidth = 6;
-            this.Toplam.Name = "Toplam";
-            // 
-            // KDVTUTARI
-            // 
-            this.KDVTUTARI.HeaderText = "KDVTUTARI";
-            this.KDVTUTARI.MinimumWidth = 6;
-            this.KDVTUTARI.Name = "KDVTUTARI";
-            this.KDVTUTARI.Visible = false;
-            // 
-            // ALISFIYATI
-            // 
-            this.ALISFIYATI.HeaderText = "ALIŞ FİYATI";
-            this.ALISFIYATI.MinimumWidth = 6;
-            this.ALISFIYATI.Name = "ALISFIYATI";
-            this.ALISFIYATI.Visible = false;
-            // 
-            // Sil
-            // 
-            this.Sil.HeaderText = "SİL";
-            this.Sil.Image = global::BarkodSatis.Properties.Resources.SİL;
-            this.Sil.MinimumWidth = 6;
-            this.Sil.Name = "Sil";
             // 
             // Form1
             // 
